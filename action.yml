@@ -1,0 +1,14 @@
+name: 'Image sign'
+description: 'Signs images with NotaryV2'
+inputs:
+   images:
+      description: 'Fully qualified resource URL of the image(s) to be used for substitutions on the manifest files Example: contosodemo.azurecr.io/helloworld:test'
+      required: true
+outputs:
+   directory:
+      description: Path to the new manifests directory. All new manifests are in the root-level.
+branding:
+   color: 'green'
+runs:
+   using: 'node16'
+   main: 'lib/index.js'
